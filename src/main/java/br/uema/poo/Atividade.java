@@ -1,10 +1,13 @@
 package br.uema.poo;
 
-import java.io.IOException;w
+import java.io.IOException;
+import java.util.Scanner;
 
 public class Atividade {
+    private static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args){
+    public void Iniciar(){
+        double a, b, c, result;
 
         int op = 99;
 
@@ -25,7 +28,34 @@ public class Atividade {
 
                 System.out.print("\nEscolha: ");
 
-                op = System.in.read();
+                op = Integer.parseInt(scanner.nextLine());
+
+                switch (op){
+                    case 1 :
+                        System.out.print("\nEntre com o primeiro número: ");
+                        a = Double.parseDouble(scanner.nextLine());
+
+                        System.out.print("\nEntre com o segundo número: ");
+                        b = Double.parseDouble(scanner.nextLine());
+
+                        result = new Produto(a, b).calcular();
+                        System.out.printf("Resultado: %f \n\n", result);
+                        break;
+
+                    case 2 :
+                        System.out.print("\nEntre com o primeiro número: ");
+                        a = Double.parseDouble(scanner.nextLine());
+
+                        System.out.print("\nEntre com o segundo número: ");
+                        b = Double.parseDouble(scanner.nextLine());
+
+                        System.out.print("\nEntre com o terceiro número: ");
+                        c = Double.parseDouble(scanner.nextLine());
+
+                        result = new Media(a, b, c).calcular();
+                        System.out.printf("Resultado: %f \n\n", result);
+                        break;
+                }
 
             }
 
