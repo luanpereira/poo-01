@@ -14,7 +14,11 @@ public class Media {
     }
 
     public Double calcular(){
-        return new BigDecimal(a).add(new BigDecimal(b)).add(new BigDecimal(c)).divide(new BigDecimal(3)).doubleValue();
+        return new BigDecimal(a)
+                .add(new BigDecimal(b))
+                .add(new BigDecimal(c))
+                .divide(new BigDecimal(3))
+                .doubleValue();
     }
 
     public Double getA() {

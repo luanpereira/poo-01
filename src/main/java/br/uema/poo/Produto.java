@@ -12,7 +12,9 @@ public class Produto {
     }
 
     public Double calcular(){
-        return new BigDecimal(a).multiply(new BigDecimal(b)).doubleValue();
+        return new BigDecimal(a)
+                .multiply(new BigDecimal(b))
+                .doubleValue();
     }
 
     public Double getA() {
